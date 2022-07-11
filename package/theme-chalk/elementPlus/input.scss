@@ -1,0 +1,78 @@
+.el-input {
+  --xxy-input-font-size: var(--xxy-font-size--4);
+  --xxy-input-font-color: var(--xxy-color-dark--1);
+  --xxy-input-border-color: var(--xxy-color-light--2);
+  --xxy-input-border-radius: var(--xxy-border-radius-s);
+  --xxy-input-bg-color--disabled: var(--xxy-color-light--6);
+  --xxy-input-border-color--focus: var(--xxy-color-primary--1);
+}
+
+.el-input {
+  .el-input__wrapper {
+    padding: 0 16px;
+
+    .el-input__prefix {
+      .el-input__prefix-inner {
+        .el-input__icon {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .el-input__inner {
+      font-size: var(--xxy-input-font-size);
+      color: var(--xxy-input-font-color);
+      border-color: var(--xxy-input-border-color);
+      border-radius: var(--xxy-input-border-radius);
+    }
+
+    .el-input__suffix {
+      display: flex;
+      align-items: center;
+      width: 24px;
+
+      .el-input__suffix-inner {
+        i {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &.is-focus {
+      box-shadow: 0 0 0 1px var(--xxy-input-border-color--focus);
+    }
+  }
+
+  // 针对弹窗等类型
+  &.qyk-input--small {
+    height: 32px;
+    line-height: 32px;
+
+    .el-input__inner {
+      height: 32px;
+      line-height: 32px;
+    }
+  }
+
+  &.is-disabled {
+    .el-input__wrapper {
+      box-shadow: none;
+      
+      .el-input__inner {
+        border-color: var(--xxy-input-border-color);
+        background-color: var(--xxy-input-bg-color--disabled);
+      }
+    }
+    
+  }
+}
+
+.el-textarea {
+  --xxy-textarea-border-color--focus: var(--xxy-color-primary--1);
+}
+
+.el-textarea {
+  .el-textarea__inner:focus {
+    box-shadow: 0 0 0 1px var(--xxy-textarea-border-color--focus);
+  }
+}

@@ -1,0 +1,80 @@
+:root {
+  // color
+  --xxy-color-primary--1: #3661F0; // main
+  --xxy-color-primary--2: #3057D7; // sub
+  --xxy-color-primary--3: #5E80F3; // hover
+  --xxy-color-primary--4: rgba(36, 99, 249, .05);
+
+  --xxy-color-dark--1: #222222;
+  --xxy-color-dark--2: #666666;
+  --xxy-color-dark--3: #50596D;
+  --xxy-color-dark--4: #858B9C;
+  --xxy-color-dark--5: 30323a;
+
+  --xxy-color-light--1: #B1B8C4;
+  --xxy-color-light--2: #E2E4EB;
+  --xxy-color-light--3: #EAEFFD;
+  --xxy-color-light--4: #F4F9FC;
+  --xxy-color-light--5: #F9FAFC;
+  --xxy-color-light--6: #F4F5F9;
+  --xxy-color-light--7: #FFFFFF;
+  --xxy-color-light--8: #F0F2F5;
+
+  --xxy-color-bright--1: #FF5B60;
+
+  --xxy-color-shdow--1: rgba(0, 0, 0, 0.15);
+  --xxy-color-shdow--2: rgba(0, 0, 0, 0.08);
+  --xxy-color-shdow--3: rgba(54, 97, 240, 0.3);
+
+  --xxy-color-linear--1: #96A3FF, #4E54FF;
+  --xxy-color-linear--2: #FFC63E, #FF9222;
+  --xxy-color-linear--3: #FF8F92, #FC102A;
+  --xxy-color-linear--5: #00E6BB, #00A49D;
+  --xxy-color-linear--4: #15B6EF, #5ED4FF;
+
+  // font-family
+  --xxy-font-family: PingFangSC-Medium, PingFang SC, tahoma, arial, 'helvetica neue', 'hiragino sans gb', 'microsoft yahei ui',
+  'microsoft yahei', simsun, sans-serif;
+
+
+  // fontsize
+  --xxy-font-size--1: 20px;
+  --xxy-font-size--2: 18px;
+  --xxy-font-size--3: 16px;
+  --xxy-font-size--4: 14px;
+  --xxy-font-size--5: 12px;
+
+  // padding
+  --xxy-padding-fpage: 20px; // 常规页面内边距
+  --xxy-padding-spage--tb: 10px; // 详情页内边距
+  --xxy-padding-spage--lr: 12px; // 详情页内边距
+  --xxy-padding-btn--large: 9px 27px; // 大按钮 内边距
+  --xxy-padding-btn--default: 5px 24px; // 默认按钮 内边距
+  --xxy-padding-btn--small: 2px 10px; // 小按钮 内边距
+  
+  // margin
+  --xxy-margin-form: 24px;
+
+  // shadow
+  --xxy-shaodw-size--page: 0px 4px 16px 0px;
+  --xxy-shadow-size--block: 0px 2px 8px 0px;
+
+  // border
+  --xxy-border-style--1: solid;
+  --xxy-border-style--2: dashed;
+  --xxy-border-style--3: dotted;
+
+  --xxy-border-width--1: 1px;
+  --xxy-border-width--2: 2px;
+  --xxy-border-width--3: 3px;
+
+  --xxy-border-radius-s: 4px;
+  --xxy-border-radius-l: 8px;
+  --xxy-border-radius-r: 50%;
+
+
+
+  // 全局重置elementplus基础样式变量
+  --el-color-primary: #3661F0;
+  --el-border-color: #E2E4EB;
+}

@@ -1,0 +1,74 @@
+.el-select {
+  --xxy-select-font-size: var(--xxy-font-size--4);
+  --xxy-select-font-color: var(--xxy-color-dark--1);
+  --xxy-select-border-color: var(--xxy-color-light--2);
+  --xxy-select-border-radius: var(--xxy-border-radius-s);
+  --xxy-select-border-color--focus: var(--xxy-color-primary--1);
+}
+
+:root {
+  --xxy-select-popver-font-color: var(--xxy-color-dark--2);
+  --xxy-select-popver-font-color--select: var(--xxy-color-primary--1);
+  --xxy-select-popver-font-color--hover: var(--xxy-color-primary--4);
+  --xxy-select-popver-border-color--focus: var(--xxy-color-primary--1);
+  --xxy-select-popver-shadow-size: var(--xxy-shadow-size--block);
+  --xxy-select-popver-shadow-color: var(--xxy-color-shdow--1);
+}
+
+.el-select {
+  .el-input {
+    max-width: 100%;
+
+    .el-input__wrapper {
+      padding-right: 0;
+    }
+
+    .el-input__inner {
+      font-size: var(--xxy-select-font-size);
+      color: var(--xxy-select-font-color);
+      border-color: var(--xxy-select-border-color);
+      border-radius: var(--xxy-select-border-radius);
+    }
+
+    &.is-focus {
+      .el-input__wrapper {
+        box-shadow: 0 0 0 1px var(--xxy-select-border-color--focus) !important;
+      }
+
+      .el-input__inner {
+        border-color: var(--xxy-select-border-color--focus);
+      }
+    }
+  }
+  
+}
+
+// 下拉弹出层 popver 到 body 得
+.el-select__popper {
+  box-shadow: var(--xxy-select-popver-shadow-size --xxy-select-popver-shadow-color);
+
+  .el-select-dropdown {
+    border-radius: var(--xxy-select-popver-border-color--focus);
+
+    .el-scrollbar {
+      .el-select-dropdown__wrap {
+        .el-select-dropdown__list {
+          .el-select-dropdown__item {
+            padding-left: 16px;
+            color: var(--xxy-select-popver-font-color);
+            height: 32px;
+            line-height: 32px;
+
+            &:hover {
+              background-color: var(--xxy-select-popver-font-color--hover);
+            }
+          }
+
+          .selected {
+            color: var(--xxy-select-popver-font-color--select);
+          }
+        }
+      }
+    }
+  }
+}

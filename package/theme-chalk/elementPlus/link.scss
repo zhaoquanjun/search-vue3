@@ -1,0 +1,22 @@
+.el-link {
+  --xxy-link-color: var(--xxy-color-primary--1)
+}
+
+.el-link {
+  &.el-link--primary {
+    color: var(--xxy-link-color);
+
+    &:hover {
+      color: var(--xxy-color-primary--3);
+    }
+  }
+
+  &.is-disabled {
+    color: var(--xxy-color-light--1);
+
+    &:hover {
+      cursor: not-allowed;
+      color: var(--xxy-color-light--1);
+    }
+  }
+}

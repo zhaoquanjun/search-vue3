@@ -1,0 +1,26 @@
+.el-checkbox {
+  --xxy-checkbox-select-color: var(--xxy-color-primary--1);
+}
+
+.el-checkbox {
+
+  .el-checkbox__input.is-indeterminate, .el-checkbox__input.is-checked {
+    
+    .el-checkbox__inner {
+      border-color: var(--xxy-checkbox-select-color);
+      background-color: var(--xxy-checkbox-select-color);
+    }
+  }
+}
+
+.el-checkbox-group {
+  .el-checkbox {
+    .el-checkbox__input.is-checked {
+      color: red;
+      .el-checkbox__inner {
+        border-color: var(--xxy-checkbox-select-color);
+        background-color: var(--xxy-checkbox-select-color);
+      }
+    }
+  }
+}

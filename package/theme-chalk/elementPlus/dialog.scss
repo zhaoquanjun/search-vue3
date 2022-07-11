@@ -1,0 +1,79 @@
+.el-dialog {
+  --xxy-dialog-font-size: var(--xxy-font-size--4);
+  --xxy-dialog-font-size--icon: var(--xxy-font-size--3);
+  --xxy-dialog-font-color: var(--xxy-color-dark--1);
+  --xxy-dialog-font-color--desc: var(--xxy-color-dark--4);
+  --xxy-dialog-border-radius: var(--xxy-border-radius-s);
+  --xxy-dialog-border-width: var(--xxy-border-width--1);
+  --xxy-dialog-border-style: var(--xxy-border-style--1);
+  --xxy-dialog-border-color: var(--xxy-color-light--8);
+}
+
+.el-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .el-overlay-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .el-dialog {
+      margin: 0;
+      border: none;
+      border-radius: var(--xxy-dialog-border-radius);
+      overflow: hidden;
+
+      .el-dialog__header {
+        margin: 0;
+        padding: 16px;
+        border-bottom: var(--xxy-dialog-border-width) var(--xxy-dialog-border-style) var(--xxy-dialog-border-color);
+        display: flex;
+        align-items: center;
+
+        .el-dialog__title {
+          line-height: 20px;
+          font-size: var(--xxy-dialog-font-size);
+          font-family: PingFangSC-Medium, PingFang SC;
+          font-weight: 500;
+          color: var(--xxy-dialog-font-color);
+        }
+
+        button {
+          top: 16px;
+          .el-dialog__close,
+          .el-message-box__close {
+            font-size: var(--xxy-dialog-font-size--icon);
+            color: var(--xxy-dialog-font-color);
+          }
+        }
+
+        .el-dialog__headerbtn {
+          top: 20px;
+          right: 20px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+      .el-dialog__body {
+        padding: 20px 16px 40px;
+        font-size: var(--xxy-dialog-font-size);
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: var(--xxy-dialog-font-color);
+
+        .descript {
+          margin-top: 10px;
+          color: var(--xxy-dialog-font-color--desc);
+          line-height: 20px;
+        }
+      }
+
+      .el-dialog__footer {
+        border-top: var(--xxy-dialog-border-width) var(--xxy-dialog-border-style) var(--xxy-dialog-border-color);
+        padding: 20px 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.el-collapse {
+  .el-collapse-item {
+    > div[role=tab] {
+      .el-collapse-item__header {
+        .el-collapse-item__arrow {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .is-active {
+    > div[role=tab] {
+      .el-collapse-item__header {
+        .el-collapse-item__arrow {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+}

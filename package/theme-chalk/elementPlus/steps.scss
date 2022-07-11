@@ -1,0 +1,102 @@
+.el-steps {
+  --xxy-steps-bg-color: var(--xxy-color-primary--1);
+  --xxy-steps-border-width: var(--xxy-border-width--2);
+  --xxy-steps-border-style: var(--xxy-border-style--1);
+  --xxy-steps-border-color: var(--xxy-color-primary--1);
+  --xxy-steps-icon-color: var(--xxy-color-light--7);
+  --xxy-steps-icon-color--wait: var(--xxy-color-light--2);
+  --xxy-steps-font-color: var(--xxy-color-dark--1);
+  --xxy-steps-font-color--sub: var(--xxy-color-dark--4);
+}
+
+.el-steps {
+  .el-step {
+    .el-step__head {
+      .el-step__line {
+        left: calc(50% + 20px);
+        right: calc(-50% + 20px);
+
+        .el-step__line-inner {
+          display: none;
+        }
+      }
+      .el-step__icon {
+        box-sizing: border-box;
+
+        .el-step__icon-inner {
+          color: var(--xxy-steps-icon-color);
+          font-weight: 500;
+        }
+      }
+
+      &.is-finish {
+        .el-step__line {
+          background-color: var(--xxy-steps-bg-color);
+        }
+
+        .el-step__icon {
+          border: var(--xxy-steps-border-width) var(--xxy-steps-border-style) var(--xxy-steps-border-color);
+
+          .el-step__icon-inner {
+            visibility: hidden;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 55%;
+            height: 33%;
+            border: var(--xxy-steps-border-width) var(--xxy-steps-border-style) var(--xxy-steps-border-color);
+            border-radius: 2px;
+            border-top: none;
+            border-right: none;
+            background: transparent;
+            transform: translate(-50%, -65%) rotate(-45deg);
+          }
+        }
+      }
+
+      &.is-process {
+        .el-step__icon {
+          background: var(--xxy-steps-bg-color);
+          border: none;
+        }
+      }
+
+      &.is-wait {
+        .el-step__icon {
+          border: none;
+          background: var(--xxy-steps-icon-color--wait);
+        }
+      }
+    }
+    .el-step__main {
+      transition: all 0.3s ease;
+      padding-top: 3px;
+
+      .el-step__title {
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: var(--xxy-steps-font-color);
+      }
+
+      .el-step__description {
+        white-space: pre-line;
+        font-size: 12px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: var(--xxy-steps-font-color--sub);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      .el-step__main {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}

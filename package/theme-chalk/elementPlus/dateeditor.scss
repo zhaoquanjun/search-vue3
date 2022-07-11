@@ -1,0 +1,22 @@
+.el-date-editor {
+  --xxy-dateeditor-font-size: var(--xxy-font-size--4);
+}
+
+.el-date-editor {
+  width: 260px;
+  height: 32px;
+  line-height: 32px;
+
+  .el-input__icon {
+    width: 20px;
+    line-height: 32px;
+  }
+
+  .el-range-separator {
+    line-height: 24px;
+  }
+
+  .el-range-input {
+    font-size: var(--xxy-dateeditor-font-size);
+  }
+}

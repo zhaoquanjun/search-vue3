@@ -1,0 +1,17 @@
+.el-dropdown {
+  .el-dropdown-link {
+
+    .el-icon {
+      vertical-align: bottom;
+      transition: transform .25s ease;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      // .el-icon {
+      //   transform: rotate(180deg);
+      // }
+    }
+  }
+}

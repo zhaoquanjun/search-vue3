@@ -1,0 +1,72 @@
+:root {
+  --xxy-cascader-font-color: var(--xxy-color-dark--2);
+  --xxy-cascader-font-size: var(--xxy-font-size--4);
+  --xxy-cascader-font-color--active: var(--xxy-color-primary--1);
+  --xxy-cascader-border-color--focus: var(--xxy-color-primary--1);
+}
+
+.el-cascader {
+  .el-input{
+    max-width: 100%;
+
+    .el-input__wrapper {
+      padding-right: 0;
+    }
+
+    &.is-focus {
+      .el-input__wrapper {
+        box-shadow: 0 0 0 1px var(--xxy-cascader-border-color--focus);
+      }
+    }
+  }
+
+
+  .el-cascader__tags {
+    flex-wrap: nowrap;
+    width: 240px;
+    .el-tag.el-tag--info {
+      &:nth-child(1) {
+        width: 140px;
+      }
+      &.el-tag--small {
+        padding: 0 4px;
+      }
+    }
+  }
+}
+
+.el-cascader__dropdown {
+  .el-cascader-panel {
+    .el-cascader-menu {
+      color: var(--xxy-cascader-font-color);
+
+      .el-cascader-menu__wrap {
+        .el-cascader-menu__list {
+          .el-cascader-node {
+            padding: 6px 12px;
+            font-size: var(--xxy-cascader-font-size);
+            height: auto;
+            line-height: normal;
+
+            .el-checkbox {
+              // 特殊处理 怀疑他们乱搞
+              margin-right: 0;
+              height: auto;
+            }
+
+            .el-cascader-node__prefix {
+              left: 8px;
+            }
+
+            &.is-active,
+            &.is-selectable.in-checked-path,
+            &.in-active-path {
+              font-weight: normal;
+              color: var(--xxy-cascader-font-color--active);
+            }
+          }
+        }
+      }
+    }
+  }
+}

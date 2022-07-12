@@ -64,15 +64,9 @@ export default defineConfig({
   plugins: [vue(), resolvePlugin(), htmlPlugin(), serverPlugin()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/main.js'),
-      name: 'QJ-SEARCH',
-      output: {
-        path: path.resolve(__dirname, './lib'),
-        name: "[name].js",
-        library: 'search',
-        libraryTarget: 'umd', // 指定输出格式
-        umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define
-      }
+      entry: path.resolve(__dirname, 'packages/index.js'),
+      name: 'QJsearch',
+      fileName: (format) => `QJsearch.${format}.js`
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
@@ -84,6 +78,8 @@ export default defineConfig({
         },
       },
     },
+    // 默认输出到lib下
+    outDir: 'lib',
     sourcemap: () => {
       return import.meta.env.MODE == 'development'
     },

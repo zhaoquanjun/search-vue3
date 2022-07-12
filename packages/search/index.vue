@@ -1,5 +1,5 @@
 <template>
-  <div class="xy-search-group--wrapper" :style="format">
+  <div class="xy-search-group--wrapper" :style="formatCssText()">
     <div class="search-inner--container" :style="{ height: wh + 'px' }" ref="transitionWrapper">
       <div
         class="search-item"
@@ -38,7 +38,7 @@ import { reactive, ref, toRefs, nextTick, watch, onMounted, onBeforeUnmount } fr
 import SearchItem from './searchItem.vue'
 import ResizeObserver from 'resize-observer-polyfill'
 export default {
-  name: 'QJ-SEARCH',
+  name: 'QJsearch',
   props: {
     searchData: {
       type: [Array, Object],
@@ -47,6 +47,10 @@ export default {
       },
     },
     initVisibleCount: [Number, String],
+    wrapperStyles: {
+      type: [String, Object],
+      default: '',
+    },
   },
   components: {
     SearchItem,
@@ -89,6 +93,25 @@ export default {
         if (type == 'search') {
           emit('searchFn', state.copySearchData)
         }
+      },
+      /**
+       * @name 格式化CSS
+       */
+      formatCssText() {
+        if (props?.wrapperStyles) {
+          const cssText = props?.wrapperStyles
+          if (typeof cssText == 'object') {
+            let str = ''
+            Array.from(Object.keys(cssText)).forEach(key => {
+              str += key + ':' + cssText[key]
+            })
+            return str
+          }
+
+          if (typeof cssText == 'string') return cssText
+        }
+
+        return ''
       },
       /**
        * @name 获取tags部分的size

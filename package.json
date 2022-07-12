@@ -1,7 +1,14 @@
 {
-  "name": "search",
-  "private": true,
+  "name": "qjsearch",
   "version": "0.0.0",
+  "main": "./lib/QJsearch.umd.js",
+  "module": "./lib/QJsearch.es.js",
+  "exports": {
+    ".": {
+      "import": "./lib/QJsearch.es.js",
+      "require": "./lib/QJsearch.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -22,5 +29,9 @@
   "files": [
     "lib",
     "package"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhaoquanjun/search-vue3.git"
+  }
 }

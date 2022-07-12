@@ -1,12 +1,10 @@
 <template>
-  <search-component :searchData="searchData" :initVisibleCount="2" @searchFn="searchCallback" />
+  <QJsearch :searchData="searchData" :initVisibleCount="2" @searchFn="searchCallback" />
 </template>
 
 <script>
-import SearchComponent from '@/components/index.vue'
 import { ref } from 'vue'
 export default {
-  components: { SearchComponent },
   setup() {
     const searchData = ref([
       {

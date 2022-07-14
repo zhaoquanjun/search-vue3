@@ -3,8 +3,8 @@
     <div class="search-inner--container" :style="{ height: wh + 'px' }" ref="transitionWrapper">
       <div
         class="search-item"
-        :class="{ inline: item?.attr?.display == 'inline' }"
-        :data-style="item?.attr?.display"
+        :class="{ inline: item?.display == 'inline' }"
+        :data-style="item?.display"
         v-for="(item, index) in copySearchData"
         :key="index"
         ref="list"
@@ -183,7 +183,7 @@ export default {
               if (index !== lists.length - 1) h += parseInt(window.getComputedStyle(vk, null).marginBottom)
             }
           })
-          return h
+          return h + 20
         }
       },
       seachTransBlockSizeObserve() {
@@ -232,59 +232,3 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.xy-search-group--wrapper {
-  padding-bottom: 16px;
-  width: 100%;
-  transition: all 0.35s ease;
-
-  .search-inner--container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 16px 16px 0;
-    overflow: hidden;
-
-    .search-item {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      min-width: 100%;
-
-      .label {
-        margin-bottom: 16px;
-        min-width: 100px;
-        font-size: 12px;
-        line-height: 30px;
-        text-align: right;
-      }
-
-      .value {
-        :deep(> div) {
-          margin-bottom: 16px;
-        }
-      }
-
-      .has-more-conditions {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-
-        .more-seach-conditions {
-          margin-right: 16px;
-
-          .search-item-reset--wrapper {
-            margin-right: 0;
-          }
-        }
-      }
-    }
-
-    .inline {
-      min-width: auto;
-    }
-  }
-}
-</style>

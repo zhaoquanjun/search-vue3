@@ -13,10 +13,8 @@ export default {
         labelName: '企业名称',
         selectName: '企业名称',
         labelVisibel: true,
-        searchVal: '',
-        attr: {
-          display: 'inline',
-        },
+        searchVal: '', 
+        display: 'inline',
         wrapperCssText: 'width: 400px',
         elplusCssText: { width: '400px' }, // 可以接受字符串或者对象格式
         immediate: false,
@@ -31,9 +29,7 @@ export default {
             text2: '收起更多筛选条件',
           },
         ],
-        attr: {
-          display: 'inline',
-        },
+        display: 'inline',
       },
       {
         type: 'inputNumber',

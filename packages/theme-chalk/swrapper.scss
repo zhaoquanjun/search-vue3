@@ -1,0 +1,54 @@
+.xy-search-group--wrapper {
+  padding-bottom: 16px;
+  width: 100%;
+  transition: all 0.35s ease;
+
+  .search-inner--container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 16px 16px 0;
+    overflow: hidden;
+
+    .search-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-width: 100%;
+
+      .label {
+        margin-bottom: 16px;
+        min-width: 100px;
+        font-size: 12px;
+        line-height: 30px;
+        text-align: right;
+      }
+
+      .value {
+        :deep(> div) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .has-more-conditions {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .more-seach-conditions {
+          margin-right: 16px;
+
+          .search-item-reset--wrapper {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .inline {
+      min-width: auto;
+    }
+  }
+}

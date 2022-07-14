@@ -1674,6 +1674,23 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
+qjsearch@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/qjsearch/-/qjsearch-0.1.0.tgz#bda267c9eea811cbdc4a51040189935c3936c424"
+  integrity sha512-h40iF5P/Az9xP41ocyMxRDRLQoBCkJKjWXg20TX6lQC/1m/1Yuih6ufW/griiQRbV1ArYIhqYkucxMF75Arrww==
+  dependencies:
+    element-plus "^2.2.6"
+    vue "^3.2.25"
+
+qjsearch@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/qjsearch/-/qjsearch-0.1.1.tgz#f42974b7d52303f98d777db1b730351feb4135bc"
+  integrity sha512-GlIpMNdVFSo/We7TDoy2/A3E9OkMRDGjBfsO9lkmxUEFBxX897i9f5M03am5GnVRXzHLeL4YlOq0MBC9XDFP8A==
+  dependencies:
+    element-plus "^2.2.6"
+    qjsearch "^0.1.0"
+    vue "^3.2.25"
+
 qs@~6.5.2:
   version "6.5.3"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"

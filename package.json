@@ -1,14 +1,32 @@
 {
   "name": "qjsearch",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A Search Component for Vue3 and Element Plus",
+  "keywords": [
+    "vue",
+    "vue3",
+    "element-plus",
+    "search",
+    "search-component"
+  ],
+  "license": "MIT",
   "main": "./lib/QJsearch.umd.js",
   "module": "./lib/QJsearch.es.js",
   "exports": {
     ".": {
       "import": "./lib/QJsearch.es.js",
       "require": "./lib/QJsearch.umd.js"
+    },
+    "./lib/index.css": {
+      "import": "./lib/index.css",
+      "require": "./lib/index.css"
     }
   },
+  "style": "lib/index.css",
+  "sideEffects": [
+    "theme-chalk/**/*.scss",
+    "theme-chalk/*.scss"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

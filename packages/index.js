@@ -1,5 +1,4 @@
-import 'element-plus/dist/index.css'
-import './theme-chalk/index.js'
+import './theme-chalk/index.scss'
 import QJsearch from './search/index.vue' //引入封装好的组件
 const coms = [ QJsearch ] //将来如果有其他逐渐，都可以写在这个数据里
 

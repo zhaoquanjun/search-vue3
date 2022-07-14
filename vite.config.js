@@ -76,6 +76,13 @@ export default defineConfig({
         globals: {
           vue: 'Vue',
         },
+        // 资源文件名：css 图片等
+        assetFileNames: (assetsName) => {
+          if (assetsName.name.includes('.css')) {
+            return 'index.css'
+          }
+          return assetsName.name
+        }
       },
     },
     // 默认输出到lib下

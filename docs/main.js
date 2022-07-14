@@ -2,7 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
 import * as ElIconModules from '@element-plus/icons-vue'
-import QJsearch from '../packages/index'
+import 'element-plus/dist/index.css'
+import QJsearch from 'qjsearch'
+import 'qjsearch/lib/index.css'
 
 const app = createApp(App)
 app.use(ElementPlus)
